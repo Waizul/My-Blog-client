@@ -1,5 +1,6 @@
 import styled from "styled-components";
 import { UL,LI, IMG } from "../../globalStyles";
+import { Link } from "react-router-dom";
 export const Top = styled.div`
 height: 50px;
 width: 100%;
@@ -7,9 +8,6 @@ display: flex;
 align-items: center;
 position: sticky;
 top: 0;
-border: 1px solid blue;
-border-color: 1px solid blue
-
 `
 
 export const TopLeft = styled.div`
@@ -24,7 +22,11 @@ export const TopLeft = styled.div`
 export const TopCenter = styled.div`
   flex: 6;
 `
-export const TopRight = styled(TopLeft)`
+export const TopRight = styled.div`
+flex: 3;
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
   
 `
 export const Icon = styled.div`
@@ -37,15 +39,19 @@ font-size: 25px;
 `
 export const NavUL = styled(UL)`
 display: flex;
-justify-content: space-between;
-margin-right: 20px;
+justify-content: space-around;
 font-size: 1.3rem;
+font-weight: 300;
 `
 
 export const NavLI = styled (LI) `
+margin-right:10px ;
 cursor: pointer;
 &:hover{
     color:gray
+}
+&>Link{
+  text-decoration:none;
 }
 `
 

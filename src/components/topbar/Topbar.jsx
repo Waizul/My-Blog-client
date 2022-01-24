@@ -1,7 +1,11 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
+import { StyledLink } from '../../globalStyles';
 import { Icon, NavLI, NavUL, Top, TopCenter, TopImg, TopLeft, TopRight } from './topbarStyles';
-
+import {LoginButton} from '../../pages/login/loginStyle'
+import { Button } from '../../pages/register/registerStyle';
 const Topbar = () => {
+    const user = false
   return <Top>
       <TopLeft>
        <Icon>  <i class="fab fa-facebook"></i></Icon> 
@@ -16,14 +20,22 @@ const Topbar = () => {
       </TopLeft>
       <TopCenter>
           <NavUL>
-              <NavLI>Home</NavLI>
-              <NavLI>About</NavLI>
-              <NavLI>Contact</NavLI>
-              <NavLI>Logout</NavLI>
+
+              <NavLI><StyledLink to='/'>Home</StyledLink></NavLI>
+              <NavLI><StyledLink to='/write'>Write</StyledLink></NavLI>
+              <NavLI><StyledLink to='/explore'>Explore</StyledLink></NavLI>
+              <NavLI><StyledLink to='/contact'>Contact</StyledLink></NavLI>
+             {user && <NavLI>Logout</NavLI>  }
           </NavUL>
           </TopCenter>
       <TopRight>
-          <TopImg/>
+          {user ? <Link to='/profile'>
+               <TopImg src='https://images.pexels.com/photos/6992/forest-trees-northwestisbest-exploress.jpg?auto=compress&cs=tinysrgb&h=650&w=940' alt=''/>
+          </Link>:<>
+              <LoginButton><StyledLink to='/login'>Login</StyledLink></LoginButton>
+              <Button><StyledLink to='/register'>Register</StyledLink></Button>
+              </>}
+         
           <Icon>
 
           <i class="fas fa-search"></i>

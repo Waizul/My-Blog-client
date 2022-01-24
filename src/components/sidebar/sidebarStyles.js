@@ -10,7 +10,7 @@ background-color: #fdfbfb;
 border-radius: 10px;
 display: flex;
 flex-direction: column;
-align-items: flex-end;
+align-items: center;
 `
 export const SidebarItem = styled.div`
 display: flex;
@@ -37,6 +37,7 @@ border-bottom: solid 1px #a7a4a4;
 font-size: 12px;
 line-height: 19px;
 font-weight: 600;
+color:#222222
 
 `
 export const SidebarUL = styled(UL)`
