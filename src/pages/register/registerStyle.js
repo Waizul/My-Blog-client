@@ -15,6 +15,7 @@ export const Title = styled.span`
 font-size: 50px;
 `
 export const Form = styled.form`
+width: 40%;
 margin-top: 20px;
 display: flex;
 flex-direction: column;
@@ -23,6 +24,7 @@ flex-direction: column;
     margin-bottom: 5px;
 }
 &>input{
+   
     padding:10px;
     border: none;
     border-radius: 10px;
@@ -30,7 +32,8 @@ flex-direction: column;
 }
 `
 export const Button = styled.button`
- /* margin-top: 20px; */
+
+ margin-top: 20px;
   cursor: pointer;
   background-color: teal;
   color: white;
@@ -38,13 +41,23 @@ export const Button = styled.button`
   border: none;
   border-radius: 10px;
   text-align: center;
- 
+
+  &:hover{
+      background-color: #0080a0;
+  }
+ .signup&{
+ width: 40%;
+ }
+
 .login&{
+    width: 20%;
     position: absolute;
     top: 10px;
     right: 30px;
     background-color: lightcoral;
-
+&:hover{
+    background-color: #fb8080
+}
 }
 
 `

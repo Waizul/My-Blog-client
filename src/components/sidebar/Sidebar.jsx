@@ -22,13 +22,13 @@ const Sidebar = () => {
       <SidebarItem>
           <SidebarTitle>Follow Us</SidebarTitle>
           <IconContainer>
-              <Icon>  <i class="fab fa-facebook"></i></Icon> 
+              <Icon>  <i className="fab fa-facebook"></i></Icon> 
        <Icon>
-      <i class="fab fa-twitter"></i>
+      <i className="fab fa-twitter"></i>
 
        </Icon>
        <Icon>
-      <i class="fab fa-pinterest"></i>
+      <i className="fab fa-pinterest"></i>
 
        </Icon>
           </IconContainer>

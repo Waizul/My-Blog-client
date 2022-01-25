@@ -26,8 +26,14 @@ export const TopRight = styled.div`
 flex: 3;
   display: flex;
   align-items: center;
-  justify-content: space-evenly;
+  justify-content: center;
+  gap: 10px;
   
+`
+export const TopImgContainer = styled.div`
+display: flex;
+align-items: center;
+justify-content: center;
 `
 export const Icon = styled.div`
 font-size: 25px;

@@ -7,10 +7,26 @@ export const LoginContainer = styled(Container)`
 `
 export const LoginButton= styled(Button)`
 background-color:lightcoral ;
+&:hover{
+  background-color: #fb8080;
+}
+.signin&{
+  background-color: teal;
+}
+.signin&{
+  width: 40%;
+  &:hover{
+    background-color: #0080a0;
+  }
+}
 .register&{
+  width: 20%;
       position: absolute;
     top: 10px;
     right: 30px;
     background-color: teal;
+     &:hover{
+    background-color: #0080a0;
+  }
 }
 `

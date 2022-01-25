@@ -9,7 +9,7 @@ const Write = () => {
 
      
           <Label htmlFor='file-input'>
-              <AddIcon><i class="fas fa-plus"></i></AddIcon>
+              <AddIcon><i className="fas fa-plus"></i></AddIcon>
               Add your file or write below:
           </Label>
           <Input type='file' id='file-input'/>

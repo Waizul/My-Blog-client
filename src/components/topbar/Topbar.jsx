@@ -1,20 +1,19 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import { StyledLink } from '../../globalStyles';
-import { Icon, NavLI, NavUL, Top, TopCenter, TopImg, TopLeft, TopRight } from './topbarStyles';
-import {LoginButton} from '../../pages/login/loginStyle'
-import { Button } from '../../pages/register/registerStyle';
+import { IconContainer, StyledLink } from '../../globalStyles';
+import { Icon, NavLI, NavUL, Top, TopCenter, TopImg, TopImgContainer, TopLeft, TopRight } from './topbarStyles';
+import useAuth from '../../hooks/useAuth'
 const Topbar = () => {
-    const user = false
+    const {user,logout} = useAuth()
   return <Top>
       <TopLeft>
-       <Icon>  <i class="fab fa-facebook"></i></Icon> 
+       <Icon>  <i className="fab fa-facebook"></i></Icon> 
        <Icon>
-      <i class="fab fa-twitter"></i>
+      <i className="fab fa-twitter"></i>
 
        </Icon>
        <Icon>
-      <i class="fab fa-pinterest"></i>
+      <i className="fab fa-pinterest"></i>
 
        </Icon>
       </TopLeft>
@@ -25,20 +24,22 @@ const Topbar = () => {
               <NavLI><StyledLink to='/write'>Write</StyledLink></NavLI>
               <NavLI><StyledLink to='/explore'>Explore</StyledLink></NavLI>
               <NavLI><StyledLink to='/contact'>Contact</StyledLink></NavLI>
-             {user && <NavLI>Logout</NavLI>  }
+             {user?.email && <NavLI onClick={logout}>Logout</NavLI>  }
           </NavUL>
           </TopCenter>
       <TopRight>
-          {user ? <Link to='/profile'>
+          {user?.email ? <StyledLink to='/profile'> <TopImgContainer>
                <TopImg src='https://images.pexels.com/photos/6992/forest-trees-northwestisbest-exploress.jpg?auto=compress&cs=tinysrgb&h=650&w=940' alt=''/>
-          </Link>:<>
-              <LoginButton><StyledLink to='/login'>Login</StyledLink></LoginButton>
-              <Button><StyledLink to='/register'>Register</StyledLink></Button>
+               <p>{user?.displayName}</p>
+               </TopImgContainer>
+          </StyledLink>:<>
+          <StyledLink to='/login'>Login</StyledLink>
+             <StyledLink to='/register'>Register</StyledLink>
               </>}
          
-          <Icon>
+          <Icon >
 
-          <i class="fas fa-search"></i>
+          <i className="fas fa-search"></i>
           </Icon>
 
       </TopRight>

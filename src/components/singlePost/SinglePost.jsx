@@ -8,8 +8,8 @@ const SinglePost = () => {
           <img  src='https://images.pexels.com/photos/1770809/pexels-photo-1770809.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940' alt='' />
           <SinglePostTitle>New Post
               <PostEdit>
-                  <EditIcon><i class="far fa-edit"></i></EditIcon>
-                  <EditIcon className='trash'><i class="far fa-trash-alt"></i></EditIcon>
+                  <EditIcon><i className="far fa-edit"></i></EditIcon>
+                  <EditIcon className='trash'><i className="far fa-trash-alt"></i></EditIcon>
               </PostEdit>
           </SinglePostTitle>
           <SinglePostInfo>
