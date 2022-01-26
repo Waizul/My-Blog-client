@@ -1,9 +1,9 @@
 import { BrowserRouter, Navigate, Route, Routes } from 'react-router-dom';
 import Topbar from './components/topbar/Topbar.jsx';
-import AuthProvider from './context/AuthProvider.js';
+
 import { GlobalStyles } from './globalStyles.js';
 import useAuth from './hooks/useAuth'
-import useFirebase from './hooks/useFirebase.js';
+
 import Home from './pages/home/Home.jsx';
 import Login from './pages/login/Login.jsx';
 import Profile from './pages/profile/Profile.jsx';
@@ -23,8 +23,11 @@ function App() {
  <Route path='/posts' element={<Home/>}/>
  <Route path='/post/:id' element={<SinglePostPage/>} />
 
-  <Route path='/write' element={user?.email?<Write/>:<Navigate to='/'/>}/>
- <Route path='/profile' element={user?.email?<Profile/>:<Navigate to='/'/>}/> 
+  <Route path='/write' element={user?.email ?<Write/>:<Navigate to='/' />}/> 
+
+  {user?.email&& 
+ <Route path='/profile' element={<Profile/>}/> 
+  }
  
 
   

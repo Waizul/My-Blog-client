@@ -6,7 +6,8 @@ display: flex;
 
 export const ProfileWrapper = styled.div`
 flex: 9;
-padding:20px
+padding:20px;
+margin-left: 30%;
 `
 export const ProfileTitle = styled.div`
 display: flex;
@@ -27,7 +28,8 @@ color: lightcoral;
 export const ProfileForm = styled.form`
 display: flex;
 flex-direction: column;
-margin-left: 100px;
+
+/* margin-left: 100px; */
 
 &>label{
     font-size: 20px;
@@ -60,7 +62,7 @@ outline-style: none;
 }
 `
 export const PSubmitButton = styled.button`
-align-self: center;
+/* align-self: center; */
   width: 150px;
   border: none;
   border-radius: 10px;
