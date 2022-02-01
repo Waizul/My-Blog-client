@@ -21,7 +21,7 @@ function App() {
     <Routes>
  <Route path='/' element={<Home/>}/>
  <Route path='/posts' element={<Home/>}/>
- <Route path='/post/:id' element={<SinglePostPage/>} />
+ <Route path='/posts/:id' element={<SinglePostPage/>} />
 
   <Route path='/write' element={user?.email ?<Write/>:<Navigate to='/' />}/> 
 

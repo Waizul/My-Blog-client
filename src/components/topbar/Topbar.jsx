@@ -29,7 +29,7 @@ const Topbar = () => {
           </TopCenter>
       <TopRight>
           {user?.email ? <StyledLink to='/profile'> <TopImgContainer>
-               <TopImg src='https://images.pexels.com/photos/6992/forest-trees-northwestisbest-exploress.jpg?auto=compress&cs=tinysrgb&h=650&w=940' alt=''/>
+               <TopImg src={user?.photoURL} alt=''/>
                <p>{user?.displayName}</p>
                </TopImgContainer>
           </StyledLink>:<>

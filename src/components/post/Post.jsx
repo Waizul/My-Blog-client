@@ -1,21 +1,26 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import { PostCategories, PostCategory, PostContainer, PostDate, PostDesc, PostImg, PostInfo, PostTitle } from './postStyles';
 
-const Post = ({img}) => {
+const Post = ({post}) => {
   return <PostContainer>
-      <PostImg src={img} alt='blog' />
+      {
+          post.photo &&  <PostImg src={post.photo} alt='blog photo' />
+      }
+     
       <PostInfo>
           <PostCategories>
-              <PostCategory>
-                  Music
-              </PostCategory>
-              <PostCategory>
-Life
-              </PostCategory>
+              {
+                  post.categories.map(c=><PostCategory>{c.name}</PostCategory>)
+              }
+            
           </PostCategories>
-          <PostTitle>Post about anything</PostTitle>
-          <PostDate>5 hour ago</PostDate>
-          <PostDesc>Welcome everyone. Today I will write something about life and music.In this blog, I will try div dive into mind, to see its impact on music. How music changes our life we may not realise how deep it does.It can imoroves life quality, increase brain activity, frshens our mind.</PostDesc>
+          <Link to={`/posts/${post._id}`}>
+<PostTitle>{post.title}</PostTitle>
+          </Link>
+          
+          <PostDate>{post.date}</PostDate>
+          <PostDesc>{post.desc}</PostDesc>
       </PostInfo>
   </PostContainer>
 };

@@ -2,7 +2,7 @@ import styled from "styled-components";
 import { LI, UL } from "../../globalStyles";
 
 export const SidebarContainer = styled.div `
-flex:3;
+flex:2;
 height:fit-content;
 margin: 20px;
 padding-bottom: 30px;
@@ -19,8 +19,8 @@ align-items: center;
 
 &>img{
     margin-top:15px;
-    width: 250px;
-    height: 250px;
+  max-width: 250px;
+    height: 200px;
 }
 &>p{
     padding:30px

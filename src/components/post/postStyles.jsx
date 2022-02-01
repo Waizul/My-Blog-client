@@ -1,15 +1,15 @@
 import styled from "styled-components";
 
 export const PostContainer = styled.div`
-    width: 385px;
+    width: 345px;
     margin: 0 25px 40px 25px;
     /* display: flex;
     flex-direction: column; */
 
 `
 export const PostImg = styled.img`
-    width: 385px;
-    height: 280px;
+    width: 345px;
+    height: 250px;
     object-fit: cover;
     border-radius: 7px;
 
